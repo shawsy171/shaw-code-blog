@@ -1,5 +1,5 @@
-const path = require('path')
-import express, { Request, Response } from 'express';
+import path from 'path'
+import express, { Request, Response } from 'express'
 
 const app = express()
 const PORT = 5001
