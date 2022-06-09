@@ -1,0 +1,8 @@
+<%- include('../partials/head'); %>
+  <!-- <%= posts.join(', ') %> -->
+  <ul>
+    <% posts.forEach(function(post){ %>
+      <li><a href="/posts/<%= post.slug %>"><%= post.title %></a></li>
+    <% }); %>
+  </ul>
+<%- include('../partials/foot'); %>
