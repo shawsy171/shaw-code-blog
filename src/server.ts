@@ -1,10 +1,17 @@
 import path from 'path'
 import express, { Request, Response } from 'express'
-import posts from './data/posts';
+import posts from './features/posts/data/posts';
+import {getCode, highlightCode} from './features/posts/services/syntax-highlighter';
+
+// highlightCode('console.log()', 'javascript');
+// const code = highlightCode('console.log()', 'javascript');
+// console.log(code);
+getCode(posts);
+
 const app = express()
 const PORT = 5001
-
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, '../public')))
+console.log(path.join(__dirname, 'public'))
 
 app.set('view engine', 'ejs');
 app.set('views', './src/views')
@@ -12,7 +19,6 @@ app.set('views', './src/views')
 app.get("/", (req: Request, res: Response) => {
   // const people = ['Javascript', 'Typescript', 'React'];
   
-
   res.render("pages/index", { posts });
 })
 

@@ -1,8 +1,8 @@
 const posts = [
 {
     id: 1,
-    title: "Hello World",
-    body: "This is my first post",
+    title: "allowing access to node server on ec2",
+    body: "PORT 5001<code>console.log()</code>",
     published: true,
     created: "2018-01-01",
     lastEdited: "2018-10-01",
@@ -19,8 +19,9 @@ const posts = [
   },
   {
     id: 3,
-    title: "Hello World 3",
-    body: "This is my third post",
+    title: "How to check an age in javascript",
+    body: `
+    This is my third post<code>const age = 23\n\nif(age > 18) { \n  console.log("you can drink") }\nelse { \n  console.log("you are under age") \n}</code>`,
     published: true,
     created: "2018-01-03",
     lastEdited: "2019-01-03",
